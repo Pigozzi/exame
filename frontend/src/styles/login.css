@@ -1,0 +1,120 @@
+main {
+    height: 100vh;
+    background-color: #201f20c7;
+ 
+}
+
+#page-login {
+    margin: 64px auto;
+    border: 2px solid #D3E2E5;
+    border-radius: 20px;
+    padding: 64px 80px;
+    background-color: rgba(214, 238, 245, 0.226);
+}
+
+form fieldset {
+    border: 0;
+}
+
+form fieldset legend {
+    width: 100%;
+
+    font-size: 32px;
+    line-height:  34px;
+    color: #e2edf0;
+    font-weight: 700;
+
+    border-bottom: 1px solid #D3E2E5;
+    margin-bottom: 10px;
+    padding-bottom: 24px;
+}
+
+form .input-block {
+    margin-top: 24px;
+}
+
+form .input-block label {
+    display: flex;
+    margin-bottom: 8px;
+    line-height: 24px;
+}
+
+form .input-block input {
+    width: 100%;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    border-radius: 10px;
+    /* outline: none;    */
+    height: 35px;
+    padding: 0 16px;
+    color: #5C8599; 
+}
+
+form .input-block textarea {
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    border-radius: 10px;
+    /* outline: none;    */
+    padding: 0 16px;
+    color: #5C8599; 
+}
+
+form .input-block select {
+    width: 100%;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    border-radius: 10px;
+    /* outline: none;    */
+    height: 35px;
+    padding: 0 16px;
+    color: #5C8599; 
+}
+
+.confirm-button {
+    /* position: absolute; */
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(36, 104, 160);
+    border: none;
+    border-radius: 10px;        
+    outline: none;
+    font-size: 16px;
+    color: #FFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+    background-color: #4d7cff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button-delete {
+    /* position: absolute; */
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(160, 36, 36);
+    border: none;
+    border-radius: 10px;        
+    outline: none;
+    font-size: 16px;
+    color: #FFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s;
+}
+
+.button-delete:hover {
+    background-color: #d63f3f;
