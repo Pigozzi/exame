@@ -22,7 +22,7 @@ class WhatsAppController {
         const phoneVerify = phone[0].phone
 
         await axios.post(
-            'https://api.z-api.io/instances/3AB83E197EEDD0A963E3160772CB221D/token/A3083698785222B04139E9C4/send-messages',
+            'https://api.z-api.io/instances/3AB9B618169E601D04BAFE0E2C9738F8/token/B7D2B00D13806F11C2405772/send-messages',
             {
                 "phone": `+55${phoneVerify}`,
                 "message": `Seu código de verificação é: ${token}`
