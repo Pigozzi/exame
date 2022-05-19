@@ -26,27 +26,31 @@ class SessionController {
 
     async verifyToken(request: Request, response: Response) {
 
-        const user_id = request.headers.authorization;
+        try {
 
-        const { token } = request.body;
+            const user_id = request.headers.authorization;
 
-        if (!user_id) {
-            return response.status(404).json({ error: "USER ID NOT FOUND" })
-        }
+            if (!user_id) {
+                return response.status(404).json({ error: "USER ID NOT FOUND" })
+            }
 
-        const verifyToken = await knex('keys')
-            .select('id').orderBy('id', 'desc')
-            .select('token')
-            .where('user_id', user_id)
-            .first()
+            const { token } = request.body;
 
-        if (token === verifyToken.token) {
+            const verifyToken = await knex('keys')
+                .select('id').orderBy('id', 'desc')
+                .select('token')
+                .where('user_id', user_id)
+                .first()
+
+            if (token != verifyToken.token) {
+                return response.status(404).json({ error: "TOKEN INVALID" })
+            }
 
             return response.json({ message: "User authenticated successfully!" })
+
+        } catch (err) {
+            return response.status(404).json({ error: "TOKEN INVALID" })
         }
-
-        return response.status(404).json({ error: "TOKEN INVALID" })
-
     }
 
 }
